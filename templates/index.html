@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ .Title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tachyons.css">
+</head>
+<body>
+<main class="flex flex-column min-vh-100"><!-- use flex to separate the layouts into diff sections. -->
+    {{ if eq .IsAuth 2 }}
+    <header class="w-100">
+        <div class="w-100 w-50-m w-30-l dib bg-washed-blue">
+            <a href="/" class="f3 f1-ns fw6 hover-blue link pointer black-80 dib ph3">CRUD</a>
+        </div>
+        <div class="w-100 w-50-m w-70-l dib">
+            <span class="f4 f3-ns fw3 ttu black-80 ph3">sessions</span>
+            <a class="br2 shadow-2 blue f3">Hi! {{ .Username }}</a>
+            <a href="/logout" class="hover-blue link pointer black-80 dib pv3">logout</a>
+        </div>
+    </header>
+    <section class="flex-auto flex flex-column">
+        <div style="background: url(assets/img/bg1.jpg);" class="vh-75 cover">
+        </div>
+        <div class="pv4 pv2-ns ph2 bg-light-gray  ph2 ph5-ns"
+             style="background-image: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)">
+            <blockquote class="lh-copy">
+                <div class="tc">
+                    <div class="dib">
+                        <form method="post" action="/">
+                            <div class="pa3"><label class="w-auto pv2 ph4 br3 shadow-2 white">{{ .Description }}</label>
+                            </div>
+                            <p class="white">edit description</p>
+                            <div class="pv2"><input class="br2 w-auto" type="text" aria-multiline="true"
+                                                    name="description" placeholder="describe yourself"></div>
+                            <div class="pv2 mv2"><input
+                                    class="f5 fw6 dib ba b--black-20 bg-blue white ph4 pv3 br2 grow no-underline"
+                                    type="submit" value="save"></div>
+                        </form>
+                    </div>
+                </div>
+            </blockquote>
+
+        </div>
+    </section>
+    {{ else }}
+    <header class="w-100">
+        <div class="w-100 w-50-m w-30-l dib bg-washed-blue">
+            <a href="/" class="f3 f1-ns fw6 hover-blue link pointer black-80 dib ph3">CRUD</a>
+        </div>
+        <div class="w-100 w-50-m w-70-l dib">
+            <span class="f4 f3-ns fw3 ttu black-80 ph3">sessions</span>
+            <a href="/login" class="hover-blue link pointer black-80 dib pv3">login</a>
+        </div>
+    </header>
+    <section class="flex-auto flex flex-column">
+        <div style="background: url(assets/img/bg1.jpg);" class="vh-75 cover">
+        </div>
+        <div class="pv4 pv2-ns ph2 bg-light-gray  ph2 ph5-ns"
+             style="background-image: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)">
+            <blockquote class="lh-copy Helvetica f5 f3-ns">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </blockquote>
+
+        </div>
+    </section>
+    {{ end }}
+    <footer class="bg-washed-blue pa4 tc">
+        <span class="f6">&copy; connelblaze</span>
+    </footer>
+</main>
+</body>
+</html>

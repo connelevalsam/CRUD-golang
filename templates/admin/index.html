@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/css/tachyons.css">
+</head>
+<body>
+<main class="flex flex-column min-vh-100"><!-- use flex to separate the layouts into diff sections. -->
+    <header class="w-100">
+        <div class="w-100 w-50-m w-30-l dib bg-washed-blue">
+            <a href="/" class="f3 f1-ns fw6 hover-blue link pointer black-80 dib ph3">CRUD</a>
+        </div>
+        <div class="w-100 w-50-m w-70-l dib">
+            <span class="f4 f3-ns fw3 ttu black-80 ph3">crud operations</span>
+            <div class="tr">
+                <a class="br2 shadow-2 blue f3">Hi! {{ .Username }}</a>
+                <a href="/logout">logout</a>
+            </div>
+        </div>
+    </header>
+    <section class="flex-auto flex flex-column flex-row-ns">
+        <div class="pv4 pv2-ns ph2 bg-light-gray">
+            <a href="/create" class="pv2 ph4 f6 fw3 fw6-ns hover-blue link pointer black-80 db">Create user</a>
+            <a href="/read" class="pv2 ph4 f6 fw3 fw6-ns hover-blue link pointer black-80 db">Read user</a>
+            <a href="/update" class="pv2 ph4 f6 fw3 fw6-ns hover-blue link pointer black-80 db">Update user</a>
+            <a href="/delete" class="pv2 ph4 f6 fw3 fw6-ns hover-blue link pointer black-80 db">Delete user</a>
+        </div>
+        <DIV class="pv4 pv2-ns ph2 bg-light-gray"
+             style="background-image: linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)">
+            <blockquote class="lh-copy">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </blockquote>
+
+        </div>
+    </section>
+    <footer class="bg-washed-blue pa4 tc">
+        <span class="f6">&copy; connelblaze</span>
+    </footer>
+</main>
+</body>
+</html>
